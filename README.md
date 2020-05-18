@@ -1,4 +1,5 @@
 # Casting Agency backend
+This application was created to allow different employees of a casting agency to manage actors and movies.  The API can be found at https://nklenke-casting-agency.herokuapp.com
 
 ## Getting Started
 
@@ -31,7 +32,7 @@ This will install all of the required packages we selected within the `requireme
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 ## Database Setup
-This application uses a sqllite database that is created upon startup.  No setup is necessary.
+This application uses a postgres database that was created at deployment time.  No setup is necessary.
 
 ## Running the server
 
@@ -68,7 +69,7 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
 4. To run unit tests, update the token for each role in test_app.py
 5. To test endpoints with [Postman](https://getpostman.com). 
     - Import the postman collection `./UdacityFSNDCapstone.postman_collection.json`
-    - Navigate to the authorization tab and update the token for the respective user noted in the test name.
+    - Navigate to the authorization tab and update the token in the folder for the respective user noted in the name.  Tests targeted at the Heroku server are noted as such in parentheses.  The other tests point to a local instance of the application.
 
 ## Endpoints 
 ### GET /actors
@@ -220,7 +221,7 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
   "deleted": 2,
   "success": true
 }
-
+```
 
 ## Error Handling
 Errors are returned as JSON objects in the following format:
@@ -239,6 +240,8 @@ The API will return these error types when requests fail:
 - 500: Internal Server Error
 
 ## Testing
+The unit tests for this application use a sqllite database that is created upon startup.  No setup is necessary.
+
 To run the tests, run
 ```
 pytest test_app.py
