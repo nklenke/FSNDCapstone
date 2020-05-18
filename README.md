@@ -34,7 +34,7 @@ This will install all of the required packages we selected within the `requireme
 ## Database Setup
 This application uses a postgres database that was created at deployment time.  No setup is necessary.  If running locally, you will need to create a postgres database called casting_agency and execute:
 ```
-python manage.py db upgrade.
+python manage.py db upgrade
 ```
 
 ## Running the server
