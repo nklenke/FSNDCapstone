@@ -32,7 +32,7 @@ This will install all of the required packages we selected within the `requireme
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 ## Database Setup
-This application uses a postgres database that was created at deployment time.  No setup is necessary.
+This application uses a postgres database that was created at deployment time.  No setup is necessary.  If running locally, you will need to create a postgres database called casting_agency and run python manage.py db upgrade.
 
 ## Running the server
 
@@ -53,15 +53,15 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
 ### Get tokens and update in tests
 1. Open the following link in a browser: https://nkcoffee.auth0.com/authorize?audience=actorsAndMovies&response_type=token&client_id=zpizdFNFV6UnzgsReSwZwPM1UzVM3QT3&redirect_uri=http://localhost:8100
 2. 3 Users have been created with their respective roles.  Each uses the password p@$$w0rd
-  a. Casting Assistant
+  - Casting Assistant
     - Email Address: udacityFSNDCapstoneCastingAssistant@yahoo.com
     - Can view actors and movies
-  b. Casting Director
+  - Casting Director
     - Email Address: udacityfsndcapstonecastingdirector@yahoo.com
     - All permissions a Casting Assistant has and…
     - Add or delete an actor from the database
     - Modify actors or movies
-  c. Executive Producer
+  - Executive Producer
     - Email Address: udacityFSNDCapstoneExecutiveProducer@yahoo.com
     - All permissions a Casting Director has and…
     - Add or delete a movie from the database
@@ -101,7 +101,6 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
     "age": 38,
     "gender": "female"
 }
-
 ```
 - Sample Response:
 ```
@@ -114,7 +113,6 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
     },
     "success": true
 }
-
 ```
 
 ### PATCH /actors/{actor_id}
@@ -176,7 +174,6 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
     "title": "Die Hard",
     "genre": "Action"
 }
-
 ```
 - Sample Response:
 ```
@@ -188,7 +185,6 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `app.py` f
     },
     "success": true
 }
-
 ```
 
 ### PATCH /movies/{movie_id}
