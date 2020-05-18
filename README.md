@@ -32,7 +32,10 @@ This will install all of the required packages we selected within the `requireme
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 ## Database Setup
-This application uses a postgres database that was created at deployment time.  No setup is necessary.  If running locally, you will need to create a postgres database called casting_agency and run python manage.py db upgrade.
+This application uses a postgres database that was created at deployment time.  No setup is necessary.  If running locally, you will need to create a postgres database called casting_agency and execute:
+```
+python manage.py db upgrade.
+```
 
 ## Running the server
 
