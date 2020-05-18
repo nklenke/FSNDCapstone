@@ -44,7 +44,7 @@ From within the project directory first ensure you are working using your create
 To run the server, execute:
 
 ```bash
-export FLASK_APP=app.y
+export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run
 ```
